@@ -12,5 +12,5 @@ func _input(event):
 			instance.set("position",position)
 			instance.set("rotation",rotation)
 			get_tree().root.add_child(instance)
-			print("Fireball!")
+			# print("Fireball!")
 

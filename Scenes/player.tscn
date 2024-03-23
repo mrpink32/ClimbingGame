@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://5ki7oa0micf8"]
+[gd_scene load_steps=6 format=3 uid="uid://5ki7oa0micf8"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerShooting.gd" id="1_vcv4g"]
 [ext_resource type="Texture2D" uid="uid://bvk7vr13d0by6" path="res://Textures/WIZARD_32x32.png" id="2_efhyp"]
+[ext_resource type="PackedScene" uid="uid://c3hu5vsepp60i" path="res://Scenes/player_ui.tscn" id="3_2qthq"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f0trf"]
 
@@ -76,3 +77,6 @@ animation = &"Run"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
+
+[node name="PlayerUI" parent="Camera2D" instance=ExtResource("3_2qthq")]
+position = Vector2(-288, -162)
