@@ -18,5 +18,15 @@ shape = SubResource("RectangleShape2D_exo8e")
 scale = Vector2(1.6, 0.161)
 texture = ExtResource("2_acypy")
 
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(600, 250)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+shape = SubResource("RectangleShape2D_exo8e")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2"]
+scale = Vector2(1.6, 0.161)
+texture = ExtResource("2_acypy")
+
 [node name="Player" parent="." instance=ExtResource("1_ypib4")]
 position = Vector2(300, 100)
