@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://yji1n278fyw4"]
+
+[ext_resource type="Script" path="res://Scripts/Play.gd" id="1_ru0kg"]
+[ext_resource type="PackedScene" uid="uid://donr3ioy265pe" path="res://Scenes/back_grund.tscn" id="2_ry3bm"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ppolg"]
+font_size = 52
+font_color = Color(0, 0, 1, 1)
+shadow_size = 7
+shadow_color = Color(0, 0, 0, 1)
+
+[node name="Main" type="Node2D"]
+
+[node name="Play" type="Button" parent="."]
+offset_left = 959.0
+offset_top = 577.0
+offset_right = 1123.0
+offset_bottom = 629.0
+text = "Play"
+script = ExtResource("1_ru0kg")
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 30.0
+offset_top = 576.0
+offset_right = 195.0
+offset_bottom = 628.0
+text = "Quit"
+
+[node name="BackGrund" parent="." instance=ExtResource("2_ry3bm")]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 308.0
+offset_top = 90.0
+offset_right = 830.0
+offset_bottom = 218.0
+text = "Tower of  Succession"
+label_settings = SubResource("LabelSettings_ppolg")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Play" to="Play" method="_on_pressed"]
+[connection signal="pressed" from="Quit" to="Play" method="_on_quit_pressed"]

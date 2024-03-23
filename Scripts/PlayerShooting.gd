@@ -1,6 +1,6 @@
-extends "res://player.gd"
+extends "res://Scripts/Player.gd"
 
-var fireball = preload("res://fireball.tscn")
+var fireball = preload("res://Scenes/fireball.tscn")
 
 func shoot_fireball():
 	pass
@@ -12,5 +12,5 @@ func _input(event):
 			instance.set("position",position)
 			instance.set("rotation",rotation)
 			get_tree().root.add_child(instance)
-			print("Mouse Click/Unclick at: ", event.position)
+			print("Fireball!")
 

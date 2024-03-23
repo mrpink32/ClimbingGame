@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://ddr0dpexqm6a0"]
 
-[ext_resource type="Texture2D" uid="uid://buquyrdhpmjv2" path="res://icon.svg" id="1_bpkta"]
-[ext_resource type="Script" path="res://fireball.gd" id="1_wf8wv"]
+[ext_resource type="Script" path="res://Scripts/fireball.gd" id="1_7jlx3"]
+[ext_resource type="Texture2D" uid="uid://c8gdhx4er8c1" path="res://Textures/fireball.png" id="2_f68sv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qsk4o"]
 
@@ -9,11 +9,10 @@
 collision_layer = 2
 collision_mask = 2
 gravity_scale = 0.0
-script = ExtResource("1_wf8wv")
+script = ExtResource("1_7jlx3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.16, 0.16)
-texture = ExtResource("1_bpkta")
+texture = ExtResource("2_f68sv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_qsk4o")
