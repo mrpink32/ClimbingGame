@@ -1,0 +1,78 @@
+[gd_scene load_steps=5 format=3 uid="uid://5ki7oa0micf8"]
+
+[ext_resource type="Script" path="res://Scripts/PlayerShooting.gd" id="1_vcv4g"]
+[ext_resource type="Texture2D" uid="uid://bvk7vr13d0by6" path="res://Textures/WIZARD_32x32.png" id="2_efhyp"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f0trf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0xt1r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"Jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"Run",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(528, 264)
+script = ExtResource("1_vcv4g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_f0trf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_efhyp")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
+sprite_frames = SubResource("SpriteFrames_0xt1r")
+animation = &"Run"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)

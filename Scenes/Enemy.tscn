@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://glnpj8nw7q58"]
+
+[ext_resource type="Texture2D" uid="uid://pagxqpop04p0" path="res://Textures/Skelarcher_sprite.png" id="1_xy6a3"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7dfkk"]
+height = 28.0
+
+[node name="Enemy" type="RigidBody2D"]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("CapsuleShape2D_7dfkk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_xy6a3")
