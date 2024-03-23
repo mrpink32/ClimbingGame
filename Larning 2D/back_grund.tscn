@@ -1,11 +1,21 @@
 [gd_scene load_steps=7 format=3 uid="uid://donr3ioy265pe"]
 
 [ext_resource type="Script" path="res://back_grund.gd" id="1_atkgc"]
-[ext_resource type="Texture2D" uid="uid://cc7cd0c415jjc" path="res://Sunny-land-files/Sunny-land-files/Graphical Assets/environment/Background/back.png" id="1_hwemw"]
-[ext_resource type="Texture2D" uid="uid://dos6tpmtii0s" path="res://Sunny-land-files/Sunny-land-files/Graphical Assets/environment/Props/plant-house.png" id="2_7wdyb"]
-[ext_resource type="Texture2D" uid="uid://c2bwewe56eiqe" path="res://PixelPlatformerSet1v.1.1/Background/05 background.png" id="4_2uoey"]
-[ext_resource type="Texture2D" uid="uid://hrkmfq3kig2s" path="res://PixelPlatformerSet1v.1.1/Background/04 background.png" id="5_tcamg"]
-[ext_resource type="Texture2D" uid="uid://b45rxnkab3tsy" path="res://PixelPlatformerSet1v.1.1/Background/03 background B.png" id="6_3iovn"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2ej5h"]
+load_path = "res://.godot/imported/back.png-8541ef08d66544ac35823c6b92755632.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_t0mb1"]
+load_path = "res://.godot/imported/plant-house.png-e7230818fcce73f32f3d0388857406d1.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0yr7s"]
+load_path = "res://.godot/imported/05 background.png-a31217c6c3c0286615b67929d02dc5d1.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_c1let"]
+load_path = "res://.godot/imported/04 background.png-be7dda4c5747e3e79e809fab64d75d88.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ujbjc"]
+load_path = "res://.godot/imported/03 background B.png-334980f5e8667f2ff31bde5d6b2aa27d.ctex"
 
 [node name="BackGrund" type="ParallaxBackground"]
 script = ExtResource("1_atkgc")
@@ -17,7 +27,7 @@ motion_mirroring = Vector2(1152, 0)
 [node name="Back" type="Sprite2D" parent="ParallaxLayer"]
 position = Vector2(575.5, 323.5)
 scale = Vector2(3.0026, 2.69583)
-texture = ExtResource("1_hwemw")
+texture = SubResource("CompressedTexture2D_2ej5h")
 metadata/_edit_lock_ = true
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
@@ -26,64 +36,64 @@ motion_mirroring = Vector2(1280, 0)
 [node name="Plant-house3" type="Sprite2D" parent="ParallaxLayer3"]
 position = Vector2(314.75, 462.25)
 scale = Vector2(0.882114, 0.878641)
-texture = ExtResource("2_7wdyb")
+texture = SubResource("CompressedTexture2D_t0mb1")
 
 [node name="05Background" type="Sprite2D" parent="ParallaxLayer3"]
 position = Vector2(212, 360)
-texture = ExtResource("4_2uoey")
+texture = SubResource("CompressedTexture2D_0yr7s")
 
 [node name="Plant-house4" type="Sprite2D" parent="ParallaxLayer3"]
 position = Vector2(818, 451)
 scale = Vector2(0.882114, 0.878641)
-texture = ExtResource("2_7wdyb")
+texture = SubResource("CompressedTexture2D_t0mb1")
 
 [node name="05Background2" type="Sprite2D" parent="ParallaxLayer3"]
 position = Vector2(638, 360)
-texture = ExtResource("4_2uoey")
+texture = SubResource("CompressedTexture2D_0yr7s")
 
 [node name="05Background3" type="Sprite2D" parent="ParallaxLayer3"]
 position = Vector2(1065, 360)
 scale = Vector2(1.00939, 1)
-texture = ExtResource("4_2uoey")
+texture = SubResource("CompressedTexture2D_0yr7s")
 
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="."]
 motion_mirroring = Vector2(1280, 0)
 
 [node name="Plant-house" type="Sprite2D" parent="ParallaxLayer4"]
 position = Vector2(86, 484)
-texture = ExtResource("2_7wdyb")
+texture = SubResource("CompressedTexture2D_t0mb1")
 
 [node name="Plant-house2" type="Sprite2D" parent="ParallaxLayer4"]
 position = Vector2(538, 479)
-texture = ExtResource("2_7wdyb")
+texture = SubResource("CompressedTexture2D_t0mb1")
 
 [node name="Plant-house4" type="Sprite2D" parent="ParallaxLayer4"]
 position = Vector2(995, 489)
-texture = ExtResource("2_7wdyb")
+texture = SubResource("CompressedTexture2D_t0mb1")
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
 motion_mirroring = Vector2(1272, 0)
 
 [node name="04Background" type="Sprite2D" parent="ParallaxLayer2"]
 position = Vector2(212, 429)
-texture = ExtResource("5_tcamg")
+texture = SubResource("CompressedTexture2D_c1let")
 
 [node name="03BackgroundB" type="Sprite2D" parent="ParallaxLayer2"]
 position = Vector2(212, 538)
-texture = ExtResource("6_3iovn")
+texture = SubResource("CompressedTexture2D_ujbjc")
 
 [node name="04Background2" type="Sprite2D" parent="ParallaxLayer2"]
 position = Vector2(637, 429)
-texture = ExtResource("5_tcamg")
+texture = SubResource("CompressedTexture2D_c1let")
 
 [node name="03BackgroundB2" type="Sprite2D" parent="ParallaxLayer2"]
 position = Vector2(637, 538)
-texture = ExtResource("6_3iovn")
+texture = SubResource("CompressedTexture2D_ujbjc")
 
 [node name="04Background3" type="Sprite2D" parent="ParallaxLayer2"]
 position = Vector2(1059, 429)
-texture = ExtResource("5_tcamg")
+texture = SubResource("CompressedTexture2D_c1let")
 
 [node name="03BackgroundB3" type="Sprite2D" parent="ParallaxLayer2"]
 position = Vector2(1059, 538)
-texture = ExtResource("6_3iovn")
+texture = SubResource("CompressedTexture2D_ujbjc")
