@@ -8374,7 +8374,7 @@ position = Vector2(1035, 63)
 king = true
 
 [node name="Enemy2" parent="." instance=ExtResource("8_hppj6")]
-position = Vector2(740, 621)
+position = Vector2(741, 621)
 
 [node name="Enemy3" parent="." instance=ExtResource("8_hppj6")]
 position = Vector2(948, 618)

@@ -35,6 +35,8 @@ func _process(delta):
 
 
 func _on_health_depleted():
+	if king:
+		get_tree().change_scene_to_file("res://Scenes/main.tscn")
 	queue_free()
 
 
