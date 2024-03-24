@@ -8311,7 +8311,9 @@ sources/3 = SubResource("TileSetAtlasSource_yuj0d")
 sources/4 = SubResource("TileSetAtlasSource_80a6p")
 
 [sub_resource type="LabelSettings" id="LabelSettings_e8k2x"]
-font_size = 12
+font_color = Color(1, 1, 0, 1)
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Start level" type="Node2D"]
 
@@ -8350,6 +8352,17 @@ offset_top = -99.0
 offset_right = 1030.0
 offset_bottom = -76.0
 text = "You are the new master"
+label_settings = SubResource("LabelSettings_e8k2x")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 159.0
+offset_top = 504.0
+offset_right = 298.0
+offset_bottom = 527.0
+text = "Go beat the wizardking
+-------->"
 label_settings = SubResource("LabelSettings_e8k2x")
 horizontal_alignment = 1
 vertical_alignment = 1
