@@ -6,17 +6,18 @@ var lives = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var instance = Sprite2D.new()
-	instance.position.y = 16
-	instance.position.x = 400
-	instance.texture = LIFE_THNIG
-	lives.append(instance)
-	instance.position.x += 20
-	lives.append(instance)
-	instance.position.x += 20
-	lives.append(instance)
-	for thing in lives:
-		add_child(thing)
+	pass
+	#var instance = Sprite2D.new()
+	#instance.position.y = 16
+	#instance.position.x = 400
+	#instance.texture = LIFE_THNIG
+	#lives.append(instance)
+	#instance.position.x += 20
+	#lives.append(instance)
+	#instance.position.x += 20
+	#lives.append(instance)
+	#for thing in lives:
+	#	add_child(thing)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bhum60gndlr1i"]
+[gd_scene load_steps=18 format=3 uid="uid://bhum60gndlr1i"]
 
 [ext_resource type="PackedScene" uid="uid://5ki7oa0micf8" path="res://Scenes/player.tscn" id="1_404bn"]
 [ext_resource type="Texture2D" uid="uid://dc7jlnbgnrkkk" path="res://Dependencies/main_lev_build.png" id="2_s7bj7"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bdaklvc8augrp" path="res://Scenes/first_level_bg.tscn" id="5_xsiwk"]
 [ext_resource type="Texture2D" uid="uid://dam3mkd22u5ut" path="res://Dependencies/bg-clouds.png" id="6_ljx4w"]
 [ext_resource type="PackedScene" uid="uid://glnpj8nw7q58" path="res://Scenes/Enemy.tscn" id="8_hppj6"]
+[ext_resource type="PackedScene" uid="uid://6cde7ywh32bd" path="res://Scenes/spell_pickup.tscn" id="9_dil68"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xkyie"]
 size = Vector2(46, 726.75)
@@ -8377,3 +8378,6 @@ position = Vector2(740, 621)
 
 [node name="Enemy3" parent="." instance=ExtResource("8_hppj6")]
 position = Vector2(948, 618)
+
+[node name="SpellPickup" parent="." instance=ExtResource("9_dil68")]
+position = Vector2(247, 630)

@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://crabves558l20" path="res://Textures/PowerUP_book.png" id="2_aoa4e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dupxo"]
-size = Vector2(4, 4)
+size = Vector2(6, 6)
 
 [node name="SpellPickup" type="Area2D"]
 collision_layer = 4
@@ -13,7 +13,7 @@ script = ExtResource("1_ajovw")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.155, 0.155)
+scale = Vector2(0.32, 0.32)
 texture = ExtResource("2_aoa4e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
