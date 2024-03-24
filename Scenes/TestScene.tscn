@@ -1,0 +1,83 @@
+[gd_scene load_steps=6 format=3 uid="uid://b7f4iouucwpgl"]
+
+[ext_resource type="Texture2D" uid="uid://buquyrdhpmjv2" path="res://icon.svg" id="1_ihbdd"]
+[ext_resource type="PackedScene" uid="uid://5ki7oa0micf8" path="res://Scenes/player.tscn" id="2_jnu1x"]
+[ext_resource type="PackedScene" uid="uid://glnpj8nw7q58" path="res://Scenes/Enemy.tscn" id="3_rabte"]
+[ext_resource type="PackedScene" uid="uid://6cde7ywh32bd" path="res://Scenes/spell_pickup.tscn" id="4_m1lmy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_exo8e"]
+size = Vector2(205, 20)
+
+[node name="Main" type="Node"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(300, 250)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_exo8e")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+scale = Vector2(1.6, 0.161)
+texture = ExtResource("1_ihbdd")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(600, 250)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+shape = SubResource("RectangleShape2D_exo8e")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2"]
+scale = Vector2(1.6, 0.161)
+texture = ExtResource("1_ihbdd")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(850, 190)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+shape = SubResource("RectangleShape2D_exo8e")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D3"]
+scale = Vector2(1.6, 0.161)
+texture = ExtResource("1_ihbdd")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+position = Vector2(963, 190)
+rotation = 1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+shape = SubResource("RectangleShape2D_exo8e")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D4"]
+scale = Vector2(1.6, 0.161)
+texture = ExtResource("1_ihbdd")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="."]
+position = Vector2(80, 250)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5"]
+shape = SubResource("RectangleShape2D_exo8e")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5"]
+scale = Vector2(1.6, 0.161)
+texture = ExtResource("1_ihbdd")
+
+[node name="Player" parent="." instance=ExtResource("2_jnu1x")]
+position = Vector2(300, 100)
+
+[node name="Enemy" parent="." instance=ExtResource("3_rabte")]
+position = Vector2(548, 166)
+
+[node name="Enemy2" parent="." instance=ExtResource("3_rabte")]
+position = Vector2(618, 165)
+
+[node name="Enemy3" parent="." instance=ExtResource("3_rabte")]
+position = Vector2(666, 168)
+
+[node name="Enemy4" parent="." instance=ExtResource("3_rabte")]
+position = Vector2(805, 125)
+
+[node name="Enemy5" parent="." instance=ExtResource("3_rabte")]
+position = Vector2(908, 129)
+
+[node name="SpellPickup" parent="." instance=ExtResource("4_m1lmy")]
+position = Vector2(80, 225)

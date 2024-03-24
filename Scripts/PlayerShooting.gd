@@ -1,16 +1,24 @@
 extends "res://Scripts/Player.gd"
 
-var fireball = preload("res://Scenes/fireball.tscn")
+@export var spells = [
+	preload("res://Scenes/fireball.tscn"),
+]
 
-func shoot_fireball():
-	pass
+func add_spell(spell: PackedScene):
+	spells.append(spell)
+
+
+func use_spell(index: int):
+	var instance = spells[index].instantiate()
+	#instance.call("setup",forward)
+	instance.set("forward",forward)
+	instance.set("position",position)
+	#instance.set("rotation",rotation)
+	get_tree().root.add_child(instance)
+
 
 func _input(event):
 	if event is InputEventMouseButton:
 		if event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-			var instance = fireball.instantiate()
-			instance.set("position",position)
-			instance.set("rotation",rotation)
-			get_tree().root.add_child(instance)
-			print("Fireball!")
-
+			use_spell(0)
+			# print("Fireball!")

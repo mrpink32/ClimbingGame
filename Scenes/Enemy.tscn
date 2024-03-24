@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://glnpj8nw7q58"]
+[gd_scene load_steps=4 format=3 uid="uid://glnpj8nw7q58"]
 
+[ext_resource type="Script" path="res://Scripts/Enemy.gd" id="1_droco"]
 [ext_resource type="Texture2D" uid="uid://pagxqpop04p0" path="res://Textures/Skelarcher_sprite.png" id="1_xy6a3"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7dfkk"]
@@ -8,6 +9,9 @@ height = 28.0
 [node name="Enemy" type="RigidBody2D"]
 collision_layer = 3
 collision_mask = 3
+mass = 10.0
+script = ExtResource("1_droco")
+metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2)
@@ -15,3 +19,6 @@ shape = SubResource("CapsuleShape2D_7dfkk")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_xy6a3")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="health_depleted" from="." to="." method="_on_health_depleted"]

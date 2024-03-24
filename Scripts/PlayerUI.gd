@@ -1,10 +1,8 @@
-extends RigidBody2D
-
-const SPEED = 800.0
+extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	linear_velocity.x = SPEED
+	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
