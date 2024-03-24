@@ -10,6 +10,7 @@ collision_layer = 2
 collision_mask = 2
 gravity_scale = 0.0
 script = ExtResource("1_083bn")
+metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_f68sv")
@@ -20,3 +21,5 @@ shape = SubResource("CircleShape2D_qsk4o")
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
 amount = 10
 gravity = Vector2(0, 98)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

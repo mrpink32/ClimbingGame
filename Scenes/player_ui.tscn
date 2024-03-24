@@ -7,8 +7,8 @@
 metadata/_edit_group_ = true
 
 [node name="Sprite2D3" type="Sprite2D" parent="."]
-position = Vector2(33, 13)
-scale = Vector2(0.5, 0.1875)
+position = Vector2(36, 13)
+scale = Vector2(0.546875, 0.1875)
 texture = ExtResource("1_8olj5")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
@@ -16,6 +16,24 @@ position = Vector2(13, 13)
 scale = Vector2(0.171875, 0.171875)
 texture = ExtResource("1_8olj5")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(13, 13)
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D2"]
+scale = Vector2(5.81818, 5.81818)
+texture = ExtResource("2_f5uml")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(36, 13)
+scale = Vector2(0.171875, 0.171875)
+texture = ExtResource("1_8olj5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D4"]
+scale = Vector2(5.81818, 5.81818)
+texture = ExtResource("2_f5uml")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(59, 13)
+scale = Vector2(0.171875, 0.171875)
+texture = ExtResource("1_8olj5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D5"]
+scale = Vector2(5.81818, 5.81818)
 texture = ExtResource("2_f5uml")
