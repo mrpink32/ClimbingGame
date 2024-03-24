@@ -1,11 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://c3hu5vsepp60i"]
+[gd_scene load_steps=8 format=3 uid="uid://c3hu5vsepp60i"]
 
 [ext_resource type="Texture2D" uid="uid://buquyrdhpmjv2" path="res://icon.svg" id="1_8olj5"]
 [ext_resource type="Script" path="res://Scripts/PlayerUI.gd" id="1_dxe3l"]
+[ext_resource type="Texture2D" uid="uid://dtnr1sibttbe3" path="res://Textures/Hat_Lives.png" id="3_lkofk"]
+[ext_resource type="Texture2D" uid="uid://dus6tswphr64k" path="res://Textures/PowerUP_Schroll.png" id="3_w7nde"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_wkrjc"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_48xg8"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_djesj"]
 
@@ -26,9 +26,9 @@ scale = Vector2(0.171875, 0.171875)
 texture = ExtResource("1_8olj5")
 
 [node name="Sprite2D" type="Sprite2D" parent="Sprite2D2"]
-position = Vector2(1.90735e-06, 1.90735e-06)
-scale = Vector2(93.0909, 93.0909)
-texture = SubResource("PlaceholderTexture2D_48xg8")
+position = Vector2(3.33786e-06, -5.72205e-06)
+scale = Vector2(3.63636, 3.63636)
+texture = ExtResource("3_w7nde")
 
 [node name="Sprite2D4" type="Sprite2D" parent="."]
 position = Vector2(36, 13)
@@ -49,3 +49,18 @@ texture = ExtResource("1_8olj5")
 position = Vector2(-3.8147e-06, 1.90735e-06)
 scale = Vector2(93.0909, 93.0909)
 texture = SubResource("PlaceholderTexture2D_pfy3n")
+
+[node name="HealthBar" type="Node2D" parent="."]
+position = Vector2(500, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="HealthBar"]
+position = Vector2(0, 16)
+texture = ExtResource("3_lkofk")
+
+[node name="Sprite2D2" type="Sprite2D" parent="HealthBar"]
+position = Vector2(30, 16)
+texture = ExtResource("3_lkofk")
+
+[node name="Sprite2D3" type="Sprite2D" parent="HealthBar"]
+position = Vector2(60, 16)
+texture = ExtResource("3_lkofk")

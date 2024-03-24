@@ -83,3 +83,5 @@ zoom = Vector2(2, 2)
 
 [node name="PlayerUI" parent="Camera2D" instance=ExtResource("3_2qthq")]
 position = Vector2(-288, -162)
+
+[connection signal="lives_changed" from="." to="Camera2D/PlayerUI" method="_on_player_lives_changed"]
