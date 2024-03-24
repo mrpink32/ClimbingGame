@@ -9,6 +9,20 @@ var forward: float = 1
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+signal lives_depleted
+signal lives_changed(old_value: int, new_value: int)
+
+@export var lives: int = 3
+
+func take_damage(amount: int):
+	var old_lives: int = lives
+	lives -= amount
+	lives_changed.emit(old_lives, lives)
+	#print("new health: %d"%health)
+	if lives <= 0:
+		lives_depleted.emit()
+
+
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
