@@ -13,5 +13,6 @@ func _process(delta):
 
 
 func _on_body_entered(body):
+	print("Spell picked up")
 	body.call("add_spell",spell)
 	queue_free()
