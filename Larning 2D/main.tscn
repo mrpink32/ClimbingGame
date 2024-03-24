@@ -38,5 +38,17 @@ label_settings = SubResource("LabelSettings_ppolg")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Label" type="Label" parent="Label"]
+offset_left = 28.0
+offset_top = 488.0
+offset_right = 550.0
+offset_bottom = 616.0
+text = "Credits:
+Ansimuz: Sunny Land - Pixel Game Art & SunnyLand Woods and
+Sideview Fantasy Patreon Collection
+
+Szadi art.: Pixel Platformer Castle
+"
+
 [connection signal="pressed" from="Play" to="Play" method="_on_pressed"]
 [connection signal="pressed" from="Quit" to="Play" method="_on_quit_pressed"]
